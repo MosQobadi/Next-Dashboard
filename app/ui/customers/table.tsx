@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import { lusitana } from '@/app/ui/fonts';
-import Search from '@/app/ui/search';
+// import Image from 'next/image';
+import { roboto_mono } from '@/app/ui/fonts';
+// import Search from '@/app/ui/search';
 import {
-  CustomersTableType,
+  // CustomersTableType,
   FormattedCustomersTable,
 } from '@/app/lib/definitions';
 
@@ -13,10 +13,10 @@ export default async function CustomersTable({
 }) {
   return (
     <div className="w-full">
-      <h1 className={`${lusitana.className} mb-8 text-xl md:text-2xl`}>
+      <h1 className={`${roboto_mono.className} mb-8 text-xl md:text-2xl`}>
         Customers
       </h1>
-      <Search placeholder="Search customers..." />
+      {/* <Search placeholder="Search customers..." /> */}
       <div className="mt-6 flow-root">
         <div className="overflow-x-auto">
           <div className="inline-block min-w-full align-middle">
@@ -31,13 +31,13 @@ export default async function CustomersTable({
                       <div>
                         <div className="mb-2 flex items-center">
                           <div className="flex items-center gap-3">
-                            <Image
+                            {/* <Image
                               src={customer.image_url}
                               className="rounded-full"
                               alt={`${customer.name}'s profile picture`}
                               width={28}
                               height={28}
-                            />
+                            /> */}
                             <p>{customer.name}</p>
                           </div>
                         </div>
@@ -88,13 +88,13 @@ export default async function CustomersTable({
                     <tr key={customer.id} className="group">
                       <td className="whitespace-nowrap bg-white py-5 pl-4 pr-3 text-sm text-black group-first-of-type:rounded-md group-last-of-type:rounded-md sm:pl-6">
                         <div className="flex items-center gap-3">
-                          <Image
+                          {/* <Image
                             src={customer.image_url}
                             className="rounded-full"
                             alt={`${customer.name}'s profile picture`}
                             width={28}
                             height={28}
-                          />
+                          /> */}
                           <p>{customer.name}</p>
                         </div>
                       </td>
